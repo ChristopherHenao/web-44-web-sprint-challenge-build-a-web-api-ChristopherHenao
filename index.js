@@ -15,6 +15,10 @@ Pull your server into this file and start it!
 
 const server = require('./api/server')
 
-server.listen(5000, () => {
-    console.log("***listening on port 5000***")
+require("dotenv").config()
+
+const port = 5000
+
+server.listen(port, () => {
+    console.log(`***listening on port ${port}***`)
 })
